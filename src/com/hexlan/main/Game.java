@@ -27,11 +27,8 @@ public class Game extends JPanel implements Runnable, KeyListener
 	private BufferedImage image;
 	private Graphics2D g;
 	
-	// Game State Manager
+	// Actual Game
 	private Level level;
-	
-	// Input
-	public static Input input;
 	
 	public Game()
 	{
