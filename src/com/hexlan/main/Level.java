@@ -69,10 +69,10 @@ public class Level
 	public void draw(Graphics2D g)
 	{
 		// Render Logic
-		g.setColor(new Color(130, 130, 230));
+		g.setColor(new Color(100, 190, 030));
 		g.fillRect(0, 0, Game.WIDTH, Game.HEIGHT);
 		
-		g.setColor(new Color(210, 210, 210));
+		g.setColor(new Color(210, 210, 80));
 		g.fillRect(x - width/2, y - height/2, width, height);
 	}
 }
