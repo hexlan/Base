@@ -5,11 +5,23 @@ import java.awt.Graphics2D;
 
 public class Level 
 {
-	int x = Game.WIDTH/2;
-	int y = Game.HEIGHT/2;
+	int ball_x = Game.WIDTH/2;
+	int ball_y = Game.HEIGHT/2;
 	
-	int width = 10;
-	int height = 10;
+	int left_x = Game.WIDTH/8;
+	int left_y = Game.HEIGHT/2;
+	
+	int right_x = (Game.WIDTH/2)+((Game.WIDTH/8)*3);
+	int right_y = Game.HEIGHT/2;
+	
+	int ball_width = 10;
+	int ball_height = 10;
+	
+	int left_width = 10;
+	int left_height = 40;
+	
+	int right_width = 10;
+	int right_height = 40;
 	
 	boolean left = false;
 	boolean right = false;
@@ -40,39 +52,45 @@ public class Level
 		handleInput();
 		
 		// Game Logic
-		if(left) { x-=4; }
-		if(right) { x+=4; }
-		if(up) { y-=4; }
-		if(down) { y+=4; }
+		if(left) { ball_x-=1; }
+		if(right) { ball_x+=1; }
+		if(up) { ball_y-=1; }
+		if(down) { ball_y+=1; }
 		
-		if(x - width/2 < 0)
+		if(ball_x - ball_width/2 < 0)
 		{
-			x = width/2;
+			ball_x = Game.WIDTH/2;
 		}
 		
-		if(x + width/2 > Game.WIDTH)
+		if(ball_x + ball_width/2 > Game.WIDTH)
 		{
-			x = Game.WIDTH - width/2;
+			ball_x = Game.WIDTH/2;
 		}
 		
-		if(y - height/2 < 0)
+		if(ball_y - ball_height/2 < 0)
 		{
-			y = height/2;
+			ball_y = ball_height/2;
 		}
 		
-		if(y + height/2 > Game.HEIGHT)
+		if(ball_y + ball_height/2 > Game.HEIGHT)
 		{
-			y = Game.HEIGHT - height/2;
+			ball_y = Game.HEIGHT - ball_height/2;
 		}
 	}
 	
 	public void draw(Graphics2D g)
 	{
 		// Render Logic
-		g.setColor(new Color(100, 190, 030));
+		g.setColor(new Color(100, 190, 30));
 		g.fillRect(0, 0, Game.WIDTH, Game.HEIGHT);
 		
 		g.setColor(new Color(210, 210, 80));
-		g.fillRect(x - width/2, y - height/2, width, height);
+		g.fillRect(ball_x - ball_width/2, ball_y - ball_height/2, ball_width, ball_height);
+		
+		g.setColor(new Color(210, 80, 80));
+		g.fillRect(left_x - left_width/2, left_y - left_height/2, left_width, left_height);
+		
+		g.setColor(new Color(80, 210, 210));
+		g.fillRect(right_x - right_width/2, right_y - right_height/2, right_width, right_height);
 	}
 }
