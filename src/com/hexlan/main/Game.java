@@ -120,25 +120,15 @@ public class Game extends JPanel implements Runnable, KeyListener
 	{
 		if(key.getKeyCode() == KeyEvent.VK_UP) Input.setKey(Input.UP, true);
 		if(key.getKeyCode() == KeyEvent.VK_DOWN) Input.setKey(Input.DOWN, true);
-		if(key.getKeyCode() == KeyEvent.VK_LEFT) Input.setKey(Input.LEFT, true);
-		if(key.getKeyCode() == KeyEvent.VK_RIGHT) Input.setKey(Input.RIGHT, true);
-		if(key.getKeyCode() == KeyEvent.VK_SPACE) Input.setKey(Input.SELECT, true);
-		if(key.getKeyCode() == KeyEvent.VK_ENTER) Input.setKey(Input.START, true);
-		if(key.getKeyCode() == KeyEvent.VK_ESCAPE) Input.setKey(Input.ESCAPE, true);
-		if(key.getKeyCode() == KeyEvent.VK_Z) Input.setKey(Input.A, true);
-		if(key.getKeyCode() == KeyEvent.VK_X) Input.setKey(Input.B, true);
+		if(key.getKeyCode() == KeyEvent.VK_W) Input.setKey(Input.W, true);
+		if(key.getKeyCode() == KeyEvent.VK_S) Input.setKey(Input.S, true);
 
 	}
 	public void keyReleased(KeyEvent key) 
 	{
 		if(key.getKeyCode() == KeyEvent.VK_UP) Input.setKey(Input.UP, false);
 		if(key.getKeyCode() == KeyEvent.VK_DOWN) Input.setKey(Input.DOWN, false);
-		if(key.getKeyCode() == KeyEvent.VK_LEFT) Input.setKey(Input.LEFT, false);
-		if(key.getKeyCode() == KeyEvent.VK_RIGHT) Input.setKey(Input.RIGHT, false);
-		if(key.getKeyCode() == KeyEvent.VK_SPACE) Input.setKey(Input.SELECT, false);
-		if(key.getKeyCode() == KeyEvent.VK_ENTER) Input.setKey(Input.START, false);
-		if(key.getKeyCode() == KeyEvent.VK_ESCAPE) Input.setKey(Input.ESCAPE, false);
-		if(key.getKeyCode() == KeyEvent.VK_Z) Input.setKey(Input.A, false);
-		if(key.getKeyCode() == KeyEvent.VK_X) Input.setKey(Input.B, false);
+		if(key.getKeyCode() == KeyEvent.VK_W) Input.setKey(Input.W, false);
+		if(key.getKeyCode() == KeyEvent.VK_S) Input.setKey(Input.S, false);
 	}
 }
